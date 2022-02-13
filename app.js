@@ -32,7 +32,6 @@ app.use('/', indexRouter);
 app.use('/item', itemRouter);
 app.use('/category', categoryRouter);
 
-/*
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
@@ -48,7 +47,5 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.send('error');
 });
-
-*/
 
 module.exports = app;

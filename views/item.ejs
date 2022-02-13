@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+
+  <body>
+    <header>
+      <h1>IVEA</h1>
+      <h3>Furniture Store</h3>
+    </header>
+
+    <main class="Item">
+      <aside>
+        <img src="/images/favicon.png" alt="item pic" />
+      </aside>
+      <section>
+        <h1><%= item.name %></h1>
+        <p><%= item.description %></p>
+
+        <div>
+          <p>Price: $<%= item.price %></p>
+          <p>Available: <%= item.stock %> Pieces</p>
+        </div>
+
+        <div>
+          <a class="updateBTN" href="/item/update/<%= item._id %>"
+            >Update Item</a
+          >
+          <button class="deleteBTN" data-doc="<%= item._id %>">
+            Delete Item
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const deleteBTN = document.querySelector('.deleteBTN');
+
+      deleteBTN.addEventListener('click', (e) => {
+        const endpoint = '/item/delete/' + deleteBTN.dataset.doc;
+        fetch(endpoint, {method: 'DELETE'})
+          .then((response) => response.json())
+          .then((data) => (window.location.href = data.redirect))
+          .catch((err) => console.log(err));
+      });
+    </script>
+  </body>
+</html>

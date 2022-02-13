@@ -7,39 +7,44 @@
       <h1>IVEA</h1>
       <h3>Furniture Store</h3>
     </header>
-    <main>
-      <aside>
-        <ul>
-          <li>All Categories</li>
-          <li>Sofas</li>
-          <li>ArmChairs</li>
-          <li>Beds</li>
-          <li>Desks</li>
-        </ul>
-      </aside>
+    <main class="Home">
+      <%- include('./partials/aside.ejs') %>
+
       <section>
-        <div>
-          <h3>Sofa 1</h3>
-          <img src="" alt="sofa pic" />
-          <p>Category: Sofas</p>
-          <p>Price: $xxx</p>
-          <p>Available: x Pieces</p>
+        <div class="top">
+          <a href="/item/create">Add an Item</a>
         </div>
-        <div>
-          <h3>Sofa 1</h3>
-          <img src="" alt="sofa pic" />
-          <p>Category: Sofas</p>
-          <p>Price: $xxx</p>
-          <p>Available: x Pieces</p>
-        </div>
-        <div>
-          <h3>Sofa 1</h3>
-          <img src="" alt="sofa pic" />
-          <p>Category: Sofas</p>
-          <p>Price: $xxx</p>
-          <p>Available: x Pieces</p>
+        <div class="bottom">
+          <% if (items.length > 0){ %> <% items.forEach(item => { %>
+
+          <div>
+            <h3><%= item.name %></h3>
+            <a href="/item/<%= item._id %>">
+              <img src="" alt="item pic alt"
+            /></a>
+            <p>Category: <%= categorys.name %></p>
+            <p>Leather Cushion Sofa</p>
+            <p>Price: $xxx</p>
+            <p>Available: x Pieces</p>
+          </div>
+
+          <% }) %> <% } else { %>
+          <p>There are no categories items to display</p>
+          <% } %>
         </div>
       </section>
     </main>
+
+    <script>
+      const deleteBTN = document.querySelector('.delete');
+
+      deleteBTN.addEventListener('click', (e) => {
+        const endpoint = '/category/delete/' + deleteBTN.dataset.doc;
+        fetch(endpoint, {method: 'DELETE'})
+          .then((response) => response.json())
+          .then((data) => (window.location.href = data.redirect))
+          .catch((err) => console.log(err));
+      });
+    </script>
   </body>
 </html>

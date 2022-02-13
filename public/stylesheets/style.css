@@ -1,8 +1,281 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
 }
 
-a {
-  color: #00B7FF;
+header {
+  background-color: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  padding: 10px;
 }
+
+header h1,
+header h3 {
+  margin: 10px;
+}
+
+.Home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.Home aside {
+  width: 25%;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+.Home aside ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.Home aside ul li a img {
+  width: 20px;
+}
+
+.Home section {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Home section .top {
+  margin: 30px;
+}
+
+.Home section .top button {
+  font-size: 20px;
+}
+
+.Home section .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Home section .bottom div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 30px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.Home section .bottom div img {
+  height: 100px;
+}
+
+.Item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 0px;
+}
+
+.Item aside img {
+  width: 500px;
+}
+
+.Item section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid black;
+  width: 500px;
+}
+
+.Item section h1 {
+  margin: 10px 0px;
+  font-size: 40px;
+}
+
+.Item section p {
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.Item section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0px;
+  width: 400px;
+}
+
+.Item section div p {
+  width: 180px;
+}
+
+.Item section .updateBTN {
+  background-color: blue;
+  font-size: 20px;
+  width: 180px;
+  padding: 10px;
+}
+
+.Item section .deleteBTN {
+  background-color: red;
+  font-size: 20px;
+  width: 180px;
+  padding: 10px;
+}
+
+.Update {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px;
+}
+
+.Update form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  border: 2px solid black;
+  width: 500px;
+}
+
+.Update form input {
+  padding: 10px;
+  margin: 10px 0px;
+}
+
+.Category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px;
+}
+
+.Category form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  border: 2px solid black;
+  width: 500px;
+}
+
+.Category form input {
+  padding: 10px;
+  margin: 10px 0px;
+}
+
+.Category-Create {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 100px 0px;
+}
+
+.Category-Create form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.Category-Create form input {
+  width: 300px;
+  margin: 10px 0px;
+}
+
+.Category-Delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 100px 0px;
+}
+
+.Category-Delete form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.Category-Delete form input {
+  width: 300px;
+  margin: 10px 0px;
+}
+/*# sourceMappingURL=style.css.map */

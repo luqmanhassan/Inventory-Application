@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+
+  <body>
+    <header>
+      <h1>IVEA</h1>
+      <h3>Furniture Store</h3>
+    </header>
+    <main class="Category-Create">
+      <aside>
+        <h1>Add a category</h1>
+      </aside>
+      <section>
+        <form method="POST" action="/category/create">
+          <label for="name">Category Name</label>
+          <input type="text" placeholder="name" name="name" required />
+          <input type="submit" value="Create Category" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

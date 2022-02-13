@@ -2,5 +2,36 @@
 <html lang="en">
   <%- include('./partials/head.ejs') %>
 
-  <body></body>
+  <body>
+    <header>
+      <h1>IVEA</h1>
+      <h3>Furniture Store</h3>
+    </header>
+    <main class="Home">
+      <%- include('./partials/aside.ejs') %>
+      <section>
+        <div class="top">
+          <a href="/item/create">Add an Item</a>
+        </div>
+        <div class="bottom">
+          <% if (items.length > 0){ %> <% items.forEach(item => { %>
+
+          <div>
+            <h3><%= item.name %></h3>
+            <a href="/item/<%= item._id %>">
+              <img src="" alt="item pic alt"
+            /></a>
+            <p>Category: <%= categorys.name %></p>
+            <p>Leather Cushion Sofa</p>
+            <p>Price: $xxx</p>
+            <p>Available: x Pieces</p>
+          </div>
+
+          <% }) %> <% } else { %>
+          <p>There are no categories items to display</p>
+          <% } %>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

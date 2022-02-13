@@ -1,0 +1,21 @@
+<aside>
+  <ul>
+    <li>
+      <a href="/"> All Categories </a>
+      <a href="/category/create"><img src="/images/plus.png" /> </a>
+    </li>
+
+    <% if (categorys.length > 0){ %> <% categorys.forEach(category => { %>
+
+    <li>
+      <a href="/category/<%= category._id %>"> <%= category.name %></a>
+      <a class="delete" data-doc="<%= category._id %>"
+        ><img src="/images/minus.png" />
+      </a>
+    </li>
+
+    <% }) %> <% } else { %>
+    <p>There are no categories to display</p>
+    <% } %>
+  </ul>
+</aside>

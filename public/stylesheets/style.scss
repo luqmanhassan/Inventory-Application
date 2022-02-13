@@ -1,0 +1,184 @@
+* {
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+header {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  padding: 10px;
+  h1,
+  h3 {
+    margin: 10px;
+  }
+}
+
+.Home {
+  display: flex;
+  padding: 10px;
+
+  aside {
+    width: 25%;
+    padding: 20px;
+    font-size: 1.5em;
+
+    ul {
+      li {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0px;
+        a {
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+  section {
+    width: 75%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    .top {
+      margin: 30px;
+      button {
+        font-size: 20px;
+      }
+    }
+
+    .bottom {
+      display: flex;
+      div {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin: 0px 30px;
+        border: 2px solid black;
+        padding: 10px;
+        img {
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+
+.Item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px 0px;
+  aside {
+    img {
+      width: 500px;
+    }
+  }
+
+  section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border: 2px solid black;
+    width: 500px;
+
+    h1 {
+      margin: 10px 0px;
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+      margin: 10px 0px;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0px;
+      width: 400px;
+
+      p {
+        width: 180px;
+      }
+    }
+    .updateBTN {
+      background-color: blue;
+      font-size: 20px;
+      width: 180px;
+      padding: 10px;
+    }
+    .deleteBTN {
+      background-color: red;
+      font-size: 20px;
+      width: 180px;
+      padding: 10px;
+    }
+  }
+}
+
+.Update {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: space-between;
+    border: 2px solid black;
+    width: 500px;
+    input {
+      padding: 10px;
+      margin: 10px 0px;
+    }
+  }
+}
+
+.Category {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: space-between;
+    border: 2px solid black;
+    width: 500px;
+    input {
+      padding: 10px;
+      margin: 10px 0px;
+    }
+  }
+}
+
+.Category-Create {
+  display: flex;
+  justify-content: space-around;
+  padding: 100px 0px;
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    input {
+      width: 300px;
+      margin: 10px 0px;
+    }
+  }
+}
+
+.Category-Delete {
+  display: flex;
+  justify-content: space-around;
+  padding: 100px 0px;
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    input {
+      width: 300px;
+      margin: 10px 0px;
+    }
+  }
+}
