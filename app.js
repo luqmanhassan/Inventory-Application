@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const indexRouter = require('./routes/index');
 const itemRouter = require('./routes/itemRoutes');
@@ -8,8 +9,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 //Set up default mongoose connection
-const mongoDB =
-  'mongodb+srv://m001-student:m001-mongodb-basics@sandbox.f7jba.mongodb.net/inventory?retryWrites=true&w=majority';
+const mongoDB = process.env.SECRET_KEY;
 
 mongoose
   .connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true})
